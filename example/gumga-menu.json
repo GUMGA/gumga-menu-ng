@@ -1,0 +1,139 @@
+[
+    {
+        "label": "Home",
+        "URL": "welcome.list",
+        "key": "CRUD-BASE",
+        "icon": "glyphicon glyphicon-home",
+        "filhos": []
+    },
+    {
+        "label": "Pessoa",
+        "URL": "pessoacadastro.list",
+        "key": "CRUD-PessoaCadastro",
+        "icon": "glyphicon glyphicon-user",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "filhos": [
+            {
+                "label": "cadastro",
+                "URL": "pessoacadastro.list",
+                "key": "CRUD-PessoaCadastro",
+                "icon": "glyphicon glyphicon-pencil",
+                "imageUrl": "",
+                "imageWidth": "",
+                "imageHeight": "",
+                "filhos": []
+            },
+            {
+                "label": "validacao",
+                "URL": "pessoatemporaria.list",
+                "key": "CRUD-PessoaCadastro",
+                "icon": "glyphicon glyphicon-ok",
+                "imageUrl": "",
+                "imageWidth": "",
+                "imageHeight": "",
+                "filhos": []
+            },
+            {
+                "label": "formulario",
+                "URL": "pessoapre.list",
+                "icon": "glyphicon glyphicon-paste",
+                "key": "CRUD-PessoaCadastro",
+                "imageUrl": "",
+                "imageWidth": "",
+                "imageHeight": "",
+                "filhos": []
+            },
+            {
+                "label": "historico",
+                "URL": "historico.list",
+                "key": "CRUD-PessoaCadastro",
+                "icon": "glyphicon glyphicon-repeat",
+                "imageUrl": "",
+                "imageWidth": "",
+                "imageHeight": "",
+                "filhos": []
+            }
+        ]
+    },
+    {
+        "label": "celula",
+        "URL": "celula.list",
+        "key": "CRUD-Celula",
+        "icon": "glyphicon glyphicon-phone",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "filhos": []
+    },
+    {
+        "label": "Discipulado",
+        "URL": "discipulado.list",
+        "key": "CRUD-Discipulado",
+        "icon": "glyphicon glyphicon-user",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "filhos": []
+    },
+    {
+        "label": "turma",
+        "URL": "turma.list",
+        "key": "CRUD-Evento",
+        "icon": "glyphicon glyphicon-list-alt",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "filhos": [
+            {
+                "label": "evento",
+                "URL": "evento.list",
+                "key": "CRUD-Evento",
+                "icon": "glyphicon glyphicon-th-list",
+                "icon_color": "",
+                "imageUrl": "",
+                "imageWidth": "",
+                "imageHeight": "",
+                "filhos": []
+            },
+            {
+                "label": "tipoatuacao",
+                "URL": "tipoatuacao.list",
+                "key": "CRUD-Evento",
+                "icon": "glyphicon glyphicon-th-list",
+                "icon_color": "",
+                "imageUrl": "",
+                "imageWidth": "",
+                "imageHeight": "",
+                "filhos": []
+            }
+        ]
+    },
+    {
+        "label": "notificacao",
+        "URL": "notificacao.list",
+        "key": "CRUD-Notificacao",
+        "icon": "glyphicon glyphicon-bell",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "filhos": []
+    },
+    {
+        "label": "configuracao",
+        "URL": "configuracao.insert",
+        "key": "CRUD-MenuConfiguracao",
+        "icon": "glyphicon glyphicon-wrench",
+        "icon_color": "",
+        "imageUrl": "",
+        "imageWidth": "",
+        "imageHeight": "",
+        "filhos": []
+    }
+]
