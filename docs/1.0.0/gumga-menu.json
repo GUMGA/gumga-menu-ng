@@ -1,0 +1,30 @@
+[
+    {
+        "label": "Home",
+        "URL": "welcome.list",
+        "key": "CRUD-BASE",
+        "icon": "glyphicon glyphicon-home",
+        "filhos": []
+    },
+    {
+        "label": "Pessoa",
+        "URL": "pessoacadastro.list",
+        "key": "CRUD-Pessoa",
+        "icon": "glyphicon glyphicon-user",
+        "filhos": []
+    },
+    {
+        "label": "notificacao",
+        "URL": "notificacao.list",
+        "key": "CRUD-Notificacao",
+        "icon": "glyphicon glyphicon-bell",
+        "filhos": []
+    },
+    {
+        "label": "configuracao",
+        "URL": "configuracao.insert",
+        "key": "CRUD-Configuracao",
+        "icon": "glyphicon glyphicon-wrench",
+        "filhos": []
+    }
+]

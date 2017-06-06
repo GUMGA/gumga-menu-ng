@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>gumga-menu-ng</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://gumga.github.io/components/style.css">
+    <link rel="stylesheet" href="../menu.css">
+
+  </head>
+  <body gumga-translate="pt-br">
+
+    <nav class="navbar navbar-inverse" ng-controller="VersionController as ctrl">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">gumga-menu-ng</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#"
+                 class="dropdown-toggle"
+                 data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ctrl.version}} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li ng-repeat="version in ctrl.versions"><a href="../{{version}}">{{version}}</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" ng-controller="Ctrl as ctrl">
+      <div class="row">
+        <div class="col-xs-6">
+          <h2>Descrição</h2>
+          <p>O componente <strong>gumga-menu-ng</strong> gera um menu lateral baseado em 2 arquivos <code>keys-url</code> e <code>menu-url</code>, a partir do itens do menu, é verificada se existe a permissão em keys e então, é apresentado no menu.</p>
+          <h3>Pré requisitos</h3>
+          <ul>
+            <li>Gumga Translate</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h4>Instalação</h4>
+          <pre><code class="prettyprint">// npm
+npm i gumga-menu-ng --save
+
+// bower
+bower install gumga-menu-ng --save</code></pre>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Usando
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-6">
+              <gumga-menu menu-url="./gumga-menu.json" keys-url="./keys.json" image="./gumga.png"></gumga-menu>
+            </div>
+            <div class="col-xs-6">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#html" aria-controls="html" role="tab" data-toggle="tab">HTML</a></li>
+                <li role="presentation"><a href="#js" aria-controls="js" role="tab" data-toggle="tab">JavaScript</a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="html">
+                  <pre><code  class="prettyprint" ng-non-bindable>&lt;body gumga-translate="pt-br">
+  &lt;gumga-menu menu-url="gumga-menu.json" keys-url="keys.json" image="./gumga.png">&lt;/gumga-menu>
+&lt;body></code></pre>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="js">
+                  <pre><code class="prettyprint">angular.module('app', ['gumga.translate','gumga.menu'])
+  .controller('Ctrl', function () {
+    var ctrl = this
+  })
+
+// Criar os arquivos ou configurar com rotas de uma API
+//keys.json
+[
+  "CRUD-BASE",
+  "CUSTOMFIELDS",
+  "TAGS",
+  "CONFIGURATION",
+  "CRUD-Pessoa",
+  "CRUD-Configuracao"
+]
+
+//gumga-menu.json
+[
+    {
+        "label": "Home",
+        "URL": "welcome.list",
+        "key": "CRUD-BASE",
+        "icon": "glyphicon glyphicon-home",
+        "filhos": []
+    },
+    {
+        "label": "Pessoa",
+        "URL": "pessoacadastro.list",
+        "key": "CRUD-Pessoa",
+        "icon": "glyphicon glyphicon-user",
+        "filhos": []
+    },
+    {
+        "label": "notificacao",
+        "URL": "notificacao.list",
+        "key": "CRUD-Notificacao",
+        "icon": "glyphicon glyphicon-bell",
+        "filhos": []
+    },
+    {
+        "label": "configuracao",
+        "URL": "configuracao.insert",
+        "key": "CRUD-MenuConfiguracao",
+        "icon": "glyphicon glyphicon-wrench",
+        "filhos": []
+    }
+]</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://unpkg.com/gumga-translate-ng@1.0.2/dist/gumga-translate.min.js"></script>
+    <script src="dist/gumga-menu.min.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="https://gumga.github.io/components/app.js"></script>
+
+  </body>
+</html>
